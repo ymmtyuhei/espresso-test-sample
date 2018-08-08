@@ -30,6 +30,7 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
         versionCode 1
         versionName "0.1.4"
         vectorDrawables.useSupportLibrary true
@@ -43,6 +44,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    testOptions {
+        execution 'ANDROID_TEST_ORCHESTRATOR'
     }
 }
 
@@ -72,6 +76,7 @@ dependencies {
         exclude group: 'com.android.support'
     }
     androidTestImplementation "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestUtil "com.android.support.test:orchestrator:$rootProject.runnerVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
 }
 
