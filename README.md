@@ -1,149 +1,55 @@
-Android Sunflower (alpha)
-=========================
-[![CircleCI](https://circleci.com/gh/googlesamples/android-sunflower/tree/master.svg?style=shield)](https://circleci.com/gh/googlesamples/android-sunflower/tree/master)
+# Android Sunflower for Androidテスト全書
 
-A gardening app illustrating Android development best practices with Android Jetpack.
+[Androidテスト全書](https://peaks.cc/android_testing)(以降では単に本書籍と表記します)の第5章「UIテスト (Espresso編)」のサンプルコードです。
 
-Android Sunflower is currently released as an alpha and is under heavy development. To view the
-latest changes, please visit the
-[Releases page](https://github.com/googlesamples/android-sunflower/releases).
-Note that some changes (such as database schema modifications) are not backwards
-compatible during this alpha period and may cause the app to crash. In this
-case, please uninstall and re-install the app.
+本リポジトリは、
+GoogleがAndroid Jetpackのサンプルアプリとして開発している[Android Sunflower](https://github.com/googlesamples/android-sunflower)をフォークしたものです。
 
-Introduction
-------------
+Android Sunflower付属の、オリジナルのREADMEは[README.orig.md](README.orig.md)を参照してください。
 
-Android Jetpack is a set of components, tools and guidance to make great Android apps. They bring
-together the existing Support Library and Architecture Components and arranges them into four
-categories:
 
-![Android Jetpack](screenshots/jetpack_donut.png "Android Jetpack Components")
+## 動作確認環境
 
-Android Sunflower demonstrates utilizing these components to create a simple gardening app.
+- Android Studio 3.2 Beta 5
+- 言語設定を日本語にしたAndroid 8.0が稼動する端末
 
-Getting Started
----------------
-This project uses the Gradle build system. To build this project, use the
-`gradlew build` command or use "Import Project" in Android Studio.
 
-There are two Gradle tasks for testing the project:
-* `connectedAndroidTest` - for running Espresso on a connected device
-* `test` - for running unit tests
+## ブランチ
 
-Screenshots
------------
+以下のブランチは、本書籍第5章の解説の各ステップと対応しています。
+コードを確認しながら第5章を読み進めたいときに活用してください。
 
-![List of plants](screenshots/phone_plant_list.png "A list of plants")
-![Plant details](screenshots/phone_plant_detail.png "Details for a specific plant")
-![My Garden](screenshots/phone_my_garden.png "Plants that have been added to your garden")
+- [step1-3](https://github.com/peaks-cc/android-sunflower/tree/step1-3)
+- [step4](https://github.com/peaks-cc/android-sunflower/tree/step4)
+- [step5](https://github.com/peaks-cc/android-sunflower/tree/step5)
+- [step6-7](https://github.com/peaks-cc/android-sunflower/tree/step6-7)
+- [step8-9](https://github.com/peaks-cc/android-sunflower/tree/step8-9)
 
-Libraries Used
---------------
-* [Foundation][0] - Components for core system capabilities, Kotlin extensions and support for
-  multidex and automated testing.
-  * [AppCompat][1] - Degrade gracefully on older versions of Android.
-  * [Android KTX][2] - Write more concise, idiomatic Kotlin code.
-  * [Test][4] - An Android testing framework for unit and runtime UI tests.
-* [Architecture][10] - A collection of libraries that help you design robust, testable, and
-  maintainable apps. Start with classes for managing your UI component lifecycle and handling data
-  persistence.
-  * [Data Binding][11] - Declaratively bind observable data to UI elements.
-  * [Lifecycles][12] - Create a UI that automatically responds to lifecycle events.
-  * [LiveData][13] - Build data objects that notify views when the underlying database changes.
-  * [Navigation][14] - Handle everything needed for in-app navigation.
-  * [Room][16] - Access your app's SQLite database with in-app objects and compile-time checks.
-  * [ViewModel][17] - Store UI-related data that isn't destroyed on app rotations. Easily schedule
-     asynchronous tasks for optimal execution.
-  * [WorkManager][18] - Manage your Android background jobs.
-* [UI][30] - Details on why and how to use UI Components in your apps - together or separate
-  * [Animations & Transitions][31] - Move widgets and transition between screens.
-  * [Fragment][34] - A basic unit of composable UI.
-  * [Layout][35] - Lay out widgets using different algorithms.
-* Third party
-  * [Glide][90] for image loading
+残りのブランチと、その意味は次の通りです。
 
-[0]: https://developer.android.com/jetpack/foundation/
-[1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
-[2]: https://developer.android.com/kotlin/ktx
-[4]: https://developer.android.com/training/testing/
-[10]: https://developer.android.com/jetpack/arch/
-[11]: https://developer.android.com/topic/libraries/data-binding/
-[12]: https://developer.android.com/topic/libraries/architecture/lifecycle
-[13]: https://developer.android.com/topic/libraries/architecture/livedata
-[14]: https://developer.android.com/topic/libraries/architecture/navigation/
-[16]: https://developer.android.com/topic/libraries/architecture/room
-[17]: https://developer.android.com/topic/libraries/architecture/viewmodel
-[18]: https://developer.android.com/topic/libraries/architecture/workmanager
-[30]: https://developer.android.com/jetpack/ui/
-[31]: https://developer.android.com/training/animation/
-[34]: https://developer.android.com/guide/components/fragments
-[35]: https://developer.android.com/guide/topics/ui/declaring-layout
-[90]: https://bumptech.github.io/glide/
+- [my-first-recording](https://github.com/peaks-cc/android-sunflower/tree/my-first-recording): 
+  テストコードが無い状態のものです。
+  書籍を参考に、テストを書いてみたい場合は、このブランチから始めてみてください。
+- [espresso-test-sample](https://github.com/peaks-cc/android-sunflower/tree/espresso-test-sample): 
+  GitHubで表示されているデフォルトブランチです。
+  [step8-9](https://github.com/peaks-cc/android-sunflower/tree/step8-9)
+  と同じものです
+- [master](https://github.com/peaks-cc/android-sunflower/tree/master): 
+  フォーク元のmasterブランチです。
 
-Upcoming features
------------------
-Updates will include incorporating additional Jetpack components and updating existing components
-as the component libraries evolve.
+## オリジナルのAndroid Sunflowerとの違い
 
-Interested in seeing a particular feature of the Android Framework or Jetpack implemented in this
-app? Please open a new [issue](https://github.com/googlesamples/android-sunflower/issues).
+- Android Studio 3.2 Beta 5でビルドできるように、ビルドスクリプトを修正しています。
+- 本書籍で紹介しているライブラリを依存関係に追加したり、バージョンを最新化しています。
+- `app/src/androidTest`配下のテストコードを全て削除しています。
+  代わりに、本書籍のサンプルコード(テストコード)を追加しています。
+- オリジナルのREADME.mdのファイル名をREADME.orig.mdにリネームしています。
+- `app/src/debug`配下に、独自のGlideモジュールを追加しています。
 
-Android Studio IDE setup
-------------------------
-For development, the latest version of Android Studio 3.2 is required. The latest version can be
-downloaded from [here](https://developer.android.com/studio/preview/).
+## ライセンス
 
-Sunflower uses [ktlint](https://ktlint.github.io/) to enforce Kotlin coding styles.
-Here's how to configure it for use with Android Studio (instructions adapted
-from the ktlint [README](https://github.com/shyiko/ktlint/blob/master/README.md)):
+Original Copyright 2018 Google, Inc.  
+Modifications Copyright 2018 TOYAMA Sumio &lt;jun.nama@gmail.com&gt;  
 
-- Close Android Studio if it's open
-
-- Download ktlint:
-
-  `curl -sSLO https://github.com/shyiko/ktlint/releases/download/0.24.0/ktlint && chmod a+x ktlint`
-
-- Inside the project root directory run:
-
-  `ktlint --apply-to-idea-project --android`
-
-- Remove ktlint if desired:
-
-  `rm ktlint`
-
-- Start Android Studio
-
-Support
--------
-
-- Google+ Community: https://plus.google.com/communities/105153134372062985968
-- Stack Overflow:
-  - http://stackoverflow.com/questions/tagged/android
-  - http://stackoverflow.com/questions/tagged/android-jetpack
-
-If you've found an error in this sample, please file an issue:
-https://github.com/googlesamples/android-sunflower/issues
-
-Patches are encouraged, and may be submitted by forking this project and submitting a pull request
-through GitHub.
-
-License
--------
-
-Copyright 2018 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+Licensed under the
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
