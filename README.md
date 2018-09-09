@@ -19,22 +19,22 @@ Android Sunflower付属の、オリジナルのREADMEは[README.orig.md](README.
 以下のブランチは、本書籍第5章の解説の各ステップと対応しています。
 コードを確認しながら第5章を読み進めたいときに活用してください。
 
-- [step1-3](https://github.com/peaks-cc/android-sunflower/tree/step1-3)
-- [step4](https://github.com/peaks-cc/android-sunflower/tree/step4)
-- [step5](https://github.com/peaks-cc/android-sunflower/tree/step5)
-- [step6-7](https://github.com/peaks-cc/android-sunflower/tree/step6-7)
-- [step8-9](https://github.com/peaks-cc/android-sunflower/tree/step8-9)
+- [step1-3](https://github.com/peaks-cc/espresso-test-sample/tree/step1-3)
+- [step4](https://github.com/peaks-cc/espresso-test-sample/tree/step4)
+- [step5](https://github.com/peaks-cc/espresso-test-sample/tree/step5)
+- [step6-7](https://github.com/peaks-cc/espresso-test-sample/tree/step6-7)
+- [step8-9](https://github.com/peaks-cc/espresso-test-sample/tree/step8-9)
 
 残りのブランチと、その意味は次の通りです。
 
-- [my-first-recording](https://github.com/peaks-cc/android-sunflower/tree/my-first-recording): 
+- [my-first-recording](https://github.com/peaks-cc/espresso-test-sample/tree/my-first-recording): 
   テストコードが無い状態のものです。
   書籍を参考に、テストを書いてみたい場合は、このブランチから始めてみてください。
-- [espresso-test-sample](https://github.com/peaks-cc/android-sunflower/tree/espresso-test-sample): 
+- [espresso-test-sample](https://github.com/peaks-cc/espresso-test-sample/tree/espresso-test-sample): 
   GitHubで表示されているデフォルトブランチです。
-  [step8-9](https://github.com/peaks-cc/android-sunflower/tree/step8-9)
+  [step8-9](https://github.com/peaks-cc/espresso-test-sample/tree/step8-9)
   と同じものです
-- [master](https://github.com/peaks-cc/android-sunflower/tree/master): 
+- [master](https://github.com/peaks-cc/espresso-test-sample/tree/master): 
   フォーク元のmasterブランチです。
 
 ## オリジナルのAndroid Sunflowerとの違い
